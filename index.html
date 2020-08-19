@@ -1,168 +1,298 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html>
+
+<head>
+    <title>Document title</title>
+    <link rel="stylesheet" href="https://www.w3.org/StyleSheets/Core/Modernist" type="text/css" />
+</head>
+
 <h1>LGBT Movie Study</h1>
 
 <p><strong>A White Paper by Ellie A. Lockhart, Ph.D.</strong></p>
 
-<p>LGBT people are not uncommon in society,<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a> but are quite uncommon in movies. This is a somewhat awkward situation, and one which has been explained in various ways by people who have noticed it or had it pointed out to them. For instance, one common assertion is that films with LGBT characters will be censored in important overseas markets, so the studios who make LGBT film cannot afford to make movies with LGBT characters or they will lose money. <a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a> </p>
+<p>LGBT people are not uncommon in society,<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a> but are quite uncommon in movies. This is a somewhat awkward situation, and one which has been explained in various ways by people who have
+    noticed it or had it pointed out to them. For instance, one common assertion is that films with LGBT characters will be censored in important overseas markets, so the studios who make LGBT film cannot afford to make movies with LGBT characters or
+    they will lose money. <a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a> </p>
 
-<p>As an LGBT-identifying independent scholar of communication, I have begun the preliminary phases of a data science project with the objective of testing certain hypotheses such as the one I&#8217;ve termed the &#8220;international box office theory,&#8221; as well as the general impression many inside and outside the film and entertainment industry seem to have that putting LGBT characters in significant roles in film would reduce the financial success of those films. I also have sought to investigate the extent to which significant LGBT representation in film is correlated (positively or negatively) with particular film genres (such as drama, comedy, action &amp; adventure, and so on). </p>
+<p>As an LGBT-identifying independent scholar of communication, I have begun the preliminary phases of a data science project with the objective of testing certain hypotheses such as the one I&#8217;ve termed the &#8220;international box office theory,&#8221;
+    as well as the general impression many inside and outside the film and entertainment industry seem to have that putting LGBT characters in significant roles in film would reduce the financial success of those films. I also have sought to investigate
+    the extent to which significant LGBT representation in film is correlated (positively or negatively) with particular film genres (such as drama, comedy, action &amp; adventure, and so on). </p>
 
-<p>This project is ongoing; this white paper presents some preliminary findings of interest which I think are noteworthy particularly with regards to the international box office theory, and which provide some perspective on how overwhelmingly underrepresented LGBT people are in film. Due to the nature of the project, extracting relevant data from &#8220;big data&#8221; datasets like the <a href="https://www.imdb.com">Internet Movie Database</a>] proved difficult and, in some cases, conceptually impossible for a single researcher without access to any source of crowdsourced human input. Part of the goal of presenting this preliminary data is to generate and guage interest in my ongoing efforts to move toward automated data collection and analysis and away from purely manual data analysis. That said, what I present here constitute significant &#8220;hard numbers&#8221; that I hope those in the entertainment industry may find worthy of consideration.</p>
+<p>This project is ongoing; this white paper presents some preliminary findings of interest which I think are noteworthy particularly with regards to the international box office theory, and which provide some perspective on how overwhelmingly underrepresented
+    LGBT people are in film. Due to the nature of the project, extracting relevant data from &#8220;big data&#8221; datasets like the <a href="https://www.imdb.com">Internet Movie Database</a>] proved difficult and, in some cases, conceptually impossible
+    for a single researcher without access to any source of crowdsourced human input. Part of the goal of presenting this preliminary data is to generate and guage interest in my ongoing efforts to move toward automated data collection and analysis and
+    away from purely manual data analysis. That said, what I present here constitute significant &#8220;hard numbers&#8221; that I hope those in the entertainment industry may find worthy of consideration.</p>
 
 <h2>Research Questions</h2>
 
 <p>This project is an empirical data science analysis study which has one broad scholarly question and one activist-scholarly question. Specifically:</p>
 
 <ul>
-<li><strong>As a scholar</strong>: what information can be gleaned about the financial costs and performance in both the US/Canadian and the broad international theatrical markets of films which depict significant roles for LGBT characters, as contrasted with the same questions about films which do not depict any significant LGBT characters. (&#8220;Significant&#8221; is obviously a value judgment, one which I have attempted to specify as objectively as possible for the purposes of data coding, as detailed in &#8220;Methods&#8221; below.)</li>
-<li><strong>As an activist and a scholar</strong>: what can LGBT film fans and activists do to convince the industry to stop underrepresenting us (my numbers confirm that we are vastly underrepresented) and to present us in significant roles in films, while grounding our arguments in hard data?</li>
+    <li><strong>As a scholar</strong>: what information can be gleaned about the financial costs and performance in both the US/Canadian and the broad international theatrical markets of films which depict significant roles for LGBT characters, as contrasted
+        with the same questions about films which do not depict any significant LGBT characters. (&#8220;Significant&#8221; is obviously a value judgment, one which I have attempted to specify as objectively as possible for the purposes of data coding,
+        as detailed in &#8220;Methods&#8221; below.)</li>
+    <li><strong>As an activist and a scholar</strong>: what can LGBT film fans and activists do to convince the industry to stop underrepresenting us (my numbers confirm that we are vastly underrepresented) and to present us in significant roles in films,
+        while grounding our arguments in hard data?</li>
 </ul>
 
 <p>More specifically, the analysis I have conducted up until this point asked a series of specific research questions which were answered through a combination of hand coding and basic data sorting/formulas:</p>
 
 <ol>
-<li>Are LGBT people objectively underrepresented in contemporary film?</li>
-<li>Do films with major LGBT characters make profits and draw audiences?</li>
-<li>Do films with major LGBT characters perform better or worse compared to otherwise similar films without LGBT characters?</li>
-<li>Are LGBT films predominately, as I hypothesized was the case, &#8220;grounded&#8221; dramas and comedies set in the &#8220;real world&#8221; without &#8220;elevated&#8221; elements such as action or science fiction, fantasy, or horror elements?</li>
-<li>If it is the case that most LGBT films are &#8220;grounded,&#8221; is this something that seems to stem from finances?</li>
-<li>Is it true, as often claimed in defense of studios who do not include major LGBT roles, that intolerance on behalf of the international community means that LGBT films cannot be successful in the international box office, while the US/Canadian market is ready for such films?</li>
+    <li>Are LGBT people objectively underrepresented in contemporary film?</li>
+    <li>Do films with major LGBT characters make profits and draw audiences?</li>
+    <li>Do films with major LGBT characters perform better or worse compared to otherwise similar films without LGBT characters?</li>
+    <li>Are LGBT films predominately, as I hypothesized was the case, &#8220;grounded&#8221; dramas and comedies set in the &#8220;real world&#8221; without &#8220;elevated&#8221; elements such as action or science fiction, fantasy, or horror elements?</li>
+    <li>If it is the case that most LGBT films are &#8220;grounded,&#8221; is this something that seems to stem from finances?</li>
+    <li>Is it true, as often claimed in defense of studios who do not include major LGBT roles, that intolerance on behalf of the international community means that LGBT films cannot be successful in the international box office, while the US/Canadian market
+        is ready for such films?</li>
 </ol>
 
 <h2>Methods</h2>
 
-<p>For the purposes of this study I used a combination of (Open Movie Database)[http://www.omdbapi.com] API queries and manual data entry and coding from (IMDB Advanced Title Search)[https://www.imdb.com/search/title/] to create a preliminary database of all films matching the parameters of the study. A film was included in the primary preliminary dataset if it, to the best of my knowledge and reading of its imdB profile, met the following criteria:</p>
+<p>For the purposes of this study I used a combination of (Open Movie Database)[http://www.omdbapi.com] API queries and manual data entry and coding from (IMDB Advanced Title Search)[https://www.imdb.com/search/title/] to create a preliminary database of
+    all films matching the parameters of the study. A film was included in the primary preliminary dataset if it, to the best of my knowledge and reading of its imdB profile, met the following criteria:</p>
 
 <ul>
-<li>has a character as a protagonist, secondary protagonist or supporting protagonist or antagonist, primary antagonist, deuteragonist, or other character with a significant narrative role who either is identified within the film itself as LGBT, or who engages in behaviors that would unambiguously classify them as a member of the LGBT umbrella - including but not limited to kissing someone of the same sex, dressing in clothing of a sex not assigned to them at birth for reasons not explained by needing to accomplish a material task or disguise themselves, being openly non-binary, or flirting unironically with people of the same sex. (Minor background characters, such as the gay man depicted in therapy at the start of <em>Avengers: Endgame</em> and the sapphic couple depicted at the end of <em>Star Wars: Episode IX: The Rise of Skywalker</em> did not include those films in the dataset, as they do not constitute significant characters for those narratives.)</li>
-<li>was released since January 1, 2010.</li>
-<li>earned any money in the United States box office OR was noted by press specifically as a result of its LGBT inclusion (this last category was included to allow some of the figures to reflect the recent trend, especially since COVID&#8211;19, of feature films releasing fully online.)</li>
-<li>is currently classified by imdB as a feature film.</li>
-<li>information from outside the <em>filmic text</em> - the feature film itself, as an artifact of analysis - such as interviews with the creative team, actors, and so on, or information about characters revealed in different films, was not considered in coding. (So, for instance, in a hypothetical where a major character in two franchise films is transgender, but this is only revealed to be the case in the second film, the first film is not included in the data set, even if it was always intended to be part of the narrative.)</li>
+    <li>has a character as a protagonist, secondary protagonist or supporting protagonist or antagonist, primary antagonist, deuteragonist, or other character with a significant narrative role who either is identified within the film itself as LGBT, or who
+        engages in behaviors that would unambiguously classify them as a member of the LGBT umbrella - including but not limited to kissing someone of the same sex, dressing in clothing of a sex not assigned to them at birth for reasons not explained
+        by needing to accomplish a material task or disguise themselves, being openly non-binary, or flirting unironically with people of the same sex. (Minor background characters, such as the gay man depicted in therapy at the start of <em>Avengers: Endgame</em>        and the sapphic couple depicted at the end of <em>Star Wars: Episode IX: The Rise of Skywalker</em> did not include those films in the dataset, as they do not constitute significant characters for those narratives.)</li>
+    <li>was released since January 1, 2010.</li>
+    <li>earned any money in the United States box office OR was noted by press specifically as a result of its LGBT inclusion (this last category was included to allow some of the figures to reflect the recent trend, especially since COVID&#8211;19, of feature
+        films releasing fully online.)</li>
+    <li>is currently classified by imdB as a feature film.</li>
+    <li>information from outside the <em>filmic text</em> - the feature film itself, as an artifact of analysis - such as interviews with the creative team, actors, and so on, or information about characters revealed in different films, was not considered
+        in coding. (So, for instance, in a hypothetical where a major character in two franchise films is transgender, but this is only revealed to be the case in the second film, the first film is not included in the data set, even if it was always intended
+        to be part of the narrative.)</li>
 </ul>
 
-<p>No judgment was made about whether the films in question reflect a positive representation of LGBT people or of the quality of the films. If a depiction of a LGBT person was openly homophobic or transphobic, but the character depicted still fit one of the categories in the criteria, the film was included (although to my knowledge, none of the films in the dataset are outright hostile to LGBT identity as a whole, though many have been heavily criticized.) The purpose here is to collect as indisputable a data set as possible, which requires omitting value judgments where possible.</p>
+<p>No judgment was made about whether the films in question reflect a positive representation of LGBT people or of the quality of the films. If a depiction of a LGBT person was openly homophobic or transphobic, but the character depicted still fit one of
+    the categories in the criteria, the film was included (although to my knowledge, none of the films in the dataset are outright hostile to LGBT identity as a whole, though many have been heavily criticized.) The purpose here is to collect as indisputable
+    a data set as possible, which requires omitting value judgments where possible.</p>
 
 <p>Some examples of how the criteria were applied as consistently as possible:</p>
 
 <ul>
-<li>The <em>Harry Potter</em> and <em>Fantastic Beasts</em> franchises were not included in the dataset, despite the widely known authorial intent that Albus Dumbledore, a deuteragonist/major supporting character in all of these titles, is gay. This is because he does not identify himself as gay or engage in any unambiguously gay acts during any of his appearances on screen, nor do other characters directly allude to his being gay. There is strong &#8220;coding&#8221; in the non-research sense of Dumbledore as gay within at least the final two <em>Harry Potter</em> titles and in <em>Fantastic Beasts: Crimes of Grindelwald</em>, and the intention is clear that we are meant to interpret Dumbledore as gay; based on the criteria of requiring confirmation from the filmic text, these titles were excluded.</li>
-<li>Following the same principal, <em>Suicide Squad</em> (2016) was excluded from the dataset, even though it is followed by sequel <em>Harley Quinn: Birds of Prey</em> in which Harley Quinn, a major character in <em>Suicide Squad</em>, is revealed to have dated women as well as men. Since Quinn only expresses opposite-sex attraction in <em>Squad</em>, it is not within the dataset&#8217;s criteria.</li>
-<li><em>Star Wars: Episode IX: Rise of Skywalker</em> contains an on screen kiss between a two women who have extremely minor roles and whose names are not mentioned out loud in the film&#8217;s runtime. This brief scene constitutes the only explicit LGBT content in the film. If the characters had been major supporting characters, deuteragonists, antagonists, or protagonists, this would have merited <em>Rise of Skywalker</em> being included in the dataset. A similar situation occurred with respect to <em>Avengers: Endgame</em> in which a man unambiguously refers to dating men and having had a deceased husband; had the man been a supporting character or of greater importance, as opposed to appearing in a single scene, he would have caused <em>Endgame</em> to become part of the dataset.</li>
-<li><em>John Wick 3: Parabellum</em>&#8217;s primary antagonist, The Adjudicator, is a non-binary transgender character. The character is not identified as &#8220;non-binary&#8221; or &#8220;transgender&#8221; in the film, but the script does not use gendered pronouns to refer to them at any point. Furthermore, unless it is otherwise established, we assume as a matter of course that actors are playing characters of their gender, unless some effort is made to establish that this is not the case (as occurred in the cases of Eddie Redmayne and Jared Leto portraying transgender women in <em>The Danish Girl</em> and <em>Dallas Buyer&#8217;s Club</em>, both of which are within the dataset). As The Adjudicator is played by a non-binary person, Asia Kate Dillon, I apply the same courtesy of assuming that they are playing their own gender, in the same way that I would not expect Keanu Reeves to affirm that he is playing a man in the same film.</li>
-<li>In <em>Star Trek Beyond</em>, Hikaru Sulu introduces his husband to other members of the main cast in a moment strongly reminiscent of the easily-missable representation in <em>Rise of Skywalker</em> and <em>Endgame</em>, which I have excluded from the dataset based on the reasoning applied above. However, Hikaru Sulu is a major character in the film; the fact that he is in a same sex relationship is a minor plot point, but he himself is not minor in the film. This is by design; part of representation is inherently recognizing that simply knowing a character shares one&#8217;s identity can be empowering, and <em>Star Trek Beyond</em> clearly conveys that Hikaru Sulu is a man who has a romantic and sexual relationship with another man, and also makes Sulu a pivotal part of the plot. Similar logic led to the inclusion of <em>Paranorman</em> in the dataset.</li>
+    <li>The <em>Harry Potter</em> and <em>Fantastic Beasts</em> franchises were not included in the dataset, despite the widely known authorial intent that Albus Dumbledore, a deuteragonist/major supporting character in all of these titles, is gay. This is
+        because he does not identify himself as gay or engage in any unambiguously gay acts during any of his appearances on screen, nor do other characters directly allude to his being gay. There is strong &#8220;coding&#8221; in the non-research sense
+        of Dumbledore as gay within at least the final two <em>Harry Potter</em> titles and in <em>Fantastic Beasts: Crimes of Grindelwald</em>, and the intention is clear that we are meant to interpret Dumbledore as gay; based on the criteria of requiring
+        confirmation from the filmic text, these titles were excluded.</li>
+    <li>Following the same principal, <em>Suicide Squad</em> (2016) was excluded from the dataset, even though it is followed by sequel <em>Harley Quinn: Birds of Prey</em> in which Harley Quinn, a major character in <em>Suicide Squad</em>, is revealed to
+        have dated women as well as men. Since Quinn only expresses opposite-sex attraction in <em>Squad</em>, it is not within the dataset&#8217;s criteria.</li>
+    <li><em>Star Wars: Episode IX: Rise of Skywalker</em> contains an on screen kiss between a two women who have extremely minor roles and whose names are not mentioned out loud in the film&#8217;s runtime. This brief scene constitutes the only explicit
+        LGBT content in the film. If the characters had been major supporting characters, deuteragonists, antagonists, or protagonists, this would have merited <em>Rise of Skywalker</em> being included in the dataset. A similar situation occurred with
+        respect to <em>Avengers: Endgame</em> in which a man unambiguously refers to dating men and having had a deceased husband; had the man been a supporting character or of greater importance, as opposed to appearing in a single scene, he would have
+        caused <em>Endgame</em> to become part of the dataset.</li>
+    <li><em>John Wick 3: Parabellum</em>&#8217;s primary antagonist, The Adjudicator, is a non-binary transgender character. The character is not identified as &#8220;non-binary&#8221; or &#8220;transgender&#8221; in the film, but the script does not use
+        gendered pronouns to refer to them at any point. Furthermore, unless it is otherwise established, we assume as a matter of course that actors are playing characters of their gender, unless some effort is made to establish that this is not the
+        case (as occurred in the cases of Eddie Redmayne and Jared Leto portraying transgender women in <em>The Danish Girl</em> and <em>Dallas Buyer&#8217;s Club</em>, both of which are within the dataset). As The Adjudicator is played by a non-binary
+        person, Asia Kate Dillon, I apply the same courtesy of assuming that they are playing their own gender, in the same way that I would not expect Keanu Reeves to affirm that he is playing a man in the same film.</li>
+    <li>In <em>Star Trek Beyond</em>, Hikaru Sulu introduces his husband to other members of the main cast in a moment strongly reminiscent of the easily-missable representation in <em>Rise of Skywalker</em> and <em>Endgame</em>, which I have excluded from
+        the dataset based on the reasoning applied above. However, Hikaru Sulu is a major character in the film; the fact that he is in a same sex relationship is a minor plot point, but he himself is not minor in the film. This is by design; part of
+        representation is inherently recognizing that simply knowing a character shares one&#8217;s identity can be empowering, and <em>Star Trek Beyond</em> clearly conveys that Hikaru Sulu is a man who has a romantic and sexual relationship with another
+        man, and also makes Sulu a pivotal part of the plot. Similar logic led to the inclusion of <em>Paranorman</em> in the dataset.</li>
 </ul>
 
 <p>I collected data according to the following categories, and utilized (datawrapper)[https://www.datawrapper.de] to create visualizations and generally analyze data.</p>
 
-<p><iframe title="LGBT Film Data Set - last updated August 18, 2020" aria-label="chart" id="datawrapper-chart-NFyPR" src="https://datawrapper.dwcdn.net/NFyPR/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1332"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-</script></p>
+<p><iframe title="LGBT Film Data Set - last updated August 18, 2020" aria-label="chart" id="datawrapper-chart-NFyPR" src="https://datawrapper.dwcdn.net/NFyPR/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1332"></iframe>
+    <script type="text/javascript">
+        ! function() {
+            "use strict";
+            window.addEventListener("message", (function(a) {
+                if (void 0 !== a.data["datawrapper-height"])
+                    for (var e in a.data["datawrapper-height"]) {
+                        var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']");
+                        t && (t.style.height = a.data["datawrapper-height"][e] + "px")
+                    }
+            }))
+        }();
+    </script>
+</p>
 
 <h3>Limitations</h3>
 
-<p>Much information about film performance is industry-specific and arcane in terms of access. Not all films in the data set had an estimated budget, and all film budget data retrieved from imdB omits marketing, which is often a substantial cost that would be relevant to conclusions derived from this data set. Without gaining access to additional industry information that, as far as I know, does not exist within public data sets, I cannot solve this particular problem, other than by excluded films without a known budget from analysis of profit, and by making comparisons only to other films&#8217; budgets without factoring in marketing (which is, again, not a budget that appears to be retrievable in public facing data sets.)</p>
+<p>Much information about film performance is industry-specific and arcane in terms of access. Not all films in the data set had an estimated budget, and all film budget data retrieved from imdB omits marketing, which is often a substantial cost that would
+    be relevant to conclusions derived from this data set. Without gaining access to additional industry information that, as far as I know, does not exist within public data sets, I cannot solve this particular problem, other than by excluded films without
+    a known budget from analysis of profit, and by making comparisons only to other films&#8217; budgets without factoring in marketing (which is, again, not a budget that appears to be retrievable in public facing data sets.)</p>
 
-<p>As I alluded to above, coding which films should be included in the dataset was done to the maximum objectivity that was possible given my knowledge. It is likely that one or two less successful films in the five thousand entries from which I selected film data would satisfy the criteria used, but that due to their obscurity, I was unaware of this. It is also possible that I have inaccurately included some films in the sample based on a good-faith interpretation of imdB, or that I have unreliably coded something. I propose a solution in my &#8220;Next Steps&#8221; section, although it is also complex and imperfect - it is not possible for machine learning or other &#8220;objective&#8221; methods to code whether a film meets these particular study criteria at this time, so the most that I could manage would be a diversification of opinions through crowdsourcing. For the moment, I emphasize that the large numbers that make the most immediate impression - the data about big budget films as well as lower budget films that were successful - are unlikely to be impacted by errors related to extremely low-budget, low-return films.</p>
+<p>As I alluded to above, coding which films should be included in the dataset was done to the maximum objectivity that was possible given my knowledge. It is likely that one or two less successful films in the five thousand entries from which I selected
+    film data would satisfy the criteria used, but that due to their obscurity, I was unaware of this. It is also possible that I have inaccurately included some films in the sample based on a good-faith interpretation of imdB, or that I have unreliably
+    coded something. I propose a solution in my &#8220;Next Steps&#8221; section, although it is also complex and imperfect - it is not possible for machine learning or other &#8220;objective&#8221; methods to code whether a film meets these particular
+    study criteria at this time, so the most that I could manage would be a diversification of opinions through crowdsourcing. For the moment, I emphasize that the large numbers that make the most immediate impression - the data about big budget films
+    as well as lower budget films that were successful - are unlikely to be impacted by errors related to extremely low-budget, low-return films.</p>
 
-<p>The dataset as it exists currently exists indexes only examples of LGBT inclusion in films, not films which do not include LGBT people or include us to a lesser extent (such as the aforementioned <em>Avengers</em> and <em>Star Wars</em> films). A comparison with the industry base is necessary; for the moment, I have made some observations about specific outstanding examples within the data sets and connected &#8220;peer films&#8221; which have similar genres, budgets, and release dates. However, a full parsing of the imdB database or a similar dataset will be required to provide full numbers on the average income and profitability of LGBT film in comparison with film in general; in &#8220;Next Steps,&#8221; I propose a Python-based solution to this, which I intend to begin developing immediately. Until then, the results provided are not absolutely relative to films as a whole and the project cannot <em>wholly</em> answer the &#8220;will executives make more cold, hard cash if they do not represent LGBT people&#8221; question. The results found so far, however, do <em>suggest</em> what I contend is a likely answer to that question.</p>
+<p>The dataset as it exists currently exists indexes only examples of LGBT inclusion in films, not films which do not include LGBT people or include us to a lesser extent (such as the aforementioned <em>Avengers</em> and <em>Star Wars</em> films). A comparison
+    with the industry base is necessary; for the moment, I have made some observations about specific outstanding examples within the data sets and connected &#8220;peer films&#8221; which have similar genres, budgets, and release dates. However, a full
+    parsing of the imdB database or a similar dataset will be required to provide full numbers on the average income and profitability of LGBT film in comparison with film in general; in &#8220;Next Steps,&#8221; I propose a Python-based solution to this,
+    which I intend to begin developing immediately. Until then, the results provided are not absolutely relative to films as a whole and the project cannot <em>wholly</em> answer the &#8220;will executives make more cold, hard cash if they do not represent
+    LGBT people&#8221; question. The results found so far, however, do <em>suggest</em> what I contend is a likely answer to that question.</p>
 
-<p>Finally, a 91 film sample presents limited, if any, statistical significance. The only way to increase the sample size is to either increase the time over which the data is included in the dataset (for instance, by extending the start data for inclusion to January 1, 2000 instead of January 1, 2010) and thereby also increase the number of films <em>outside</em> the dataset even more drastically; or, to actually cause the production of more LGBT films. For better or worse, these are the films that fit the criteria. If Hollywood (and the international film industry) have not produced enough LGBT representation in a meaningful way to be statistically significant, and therefore cannot answer questions about the profitability of LGBT film, then Hollywood (and the international film industry) have brought this uncertainty on themselves by producing such disproportionately low levels of representation. What <em>is</em> definitive is that there are far fewer films of note with any LGBT characters or actions of significance than there are LGBT people in the population; this dataset confirms this inarguably.</p>
+<p>Finally, a 91 film sample presents limited, if any, statistical significance. The only way to increase the sample size is to either increase the time over which the data is included in the dataset (for instance, by extending the start data for inclusion
+    to January 1, 2000 instead of January 1, 2010) and thereby also increase the number of films <em>outside</em> the dataset even more drastically; or, to actually cause the production of more LGBT films. For better or worse, these are the films that
+    fit the criteria. If Hollywood (and the international film industry) have not produced enough LGBT representation in a meaningful way to be statistically significant, and therefore cannot answer questions about the profitability of LGBT film, then
+    Hollywood (and the international film industry) have brought this uncertainty on themselves by producing such disproportionately low levels of representation. What <em>is</em> definitive is that there are far fewer films of note with any LGBT characters
+    or actions of significance than there are LGBT people in the population; this dataset confirms this inarguably.</p>
 
 <h2>Findings</h2>
 
 <p>Parsing of findings is ongoing; many potential angles can be taken even from the limited, existing data. To summarize the key points shown by the dataset as it exists:</p>
 
 <ul>
-<li>LGBT films are uncommon; only 91 were found in a sample of approximately 5,000. Any margin of error will not change this.</li>
-<li>LGBT films that do exist have overwhelmingly been minimal budget dramas; of films that have gotten significant budgets or made substantial earnings, however, this is not necessarily the case.
+    <li>LGBT films are uncommon; only 91 were found in a sample of approximately 5,000. Any margin of error will not change this.</li>
+    <li>LGBT films that do exist have overwhelmingly been minimal budget dramas; of films that have gotten significant budgets or made substantial earnings, however, this is not necessarily the case.
 
-<ul>
-<li>The most successful films on a &#8220;return on investment&#8221; basis have been neither the lowest budget indie films (which are likely not substantially marketed and not released in as many theaters) nor the highest budget tentpole features, but rather mid-budget releases such as <em>Black Swan</em> and <em>The Imitation Game</em>, both of which have thriller elements even though the latter is also a biographical picture (biopic).</li>
-<li>Cost has been a major factor; films such as <em>Cloud Atlas</em> and <em>Atomic Blonde</em> that had strong LGBT representation in their major characters, and also strong &#8220;genre&#8221; elements (science fiction for the former, action and adventure for the latter) technically came out ahead in terms of making a profit, but not by much. However, when compared with other (not significantly representing LGBT people) films of the same year, the returns on investment for some films such as <em>Atomic Blonde</em> become somewhat more favorable to these films, by comparison.
+        <ul>
+            <li>The most successful films on a &#8220;return on investment&#8221; basis have been neither the lowest budget indie films (which are likely not substantially marketed and not released in as many theaters) nor the highest budget tentpole features,
+                but rather mid-budget releases such as <em>Black Swan</em> and <em>The Imitation Game</em>, both of which have thriller elements even though the latter is also a biographical picture (biopic).</li>
+            <li>Cost has been a major factor; films such as <em>Cloud Atlas</em> and <em>Atomic Blonde</em> that had strong LGBT representation in their major characters, and also strong &#8220;genre&#8221; elements (science fiction for the former, action
+                and adventure for the latter) technically came out ahead in terms of making a profit, but not by much. However, when compared with other (not significantly representing LGBT people) films of the same year, the returns on investment for
+                some films such as <em>Atomic Blonde</em> become somewhat more favorable to these films, by comparison.
 
-<ul>
-<li>I chose three action and adventure or science fiction and fantasy-classified films released in 2017 (the same year as <em>Atomic Blonde</em>) from outside the dataset to compare: <em>Blade Runner 2049</em>, <em>Justice League</em>, and <em>Baby Driver</em>. It was difficult to find action movies with budgets as comparatiely low as <em>Atomic</em>&#8217;s $30M USD, with only <em>Baby Driver</em> coming close at $34M USD. The other two films were simply the most similar in terms of tone and genre that I could find from that year.<a href="#fn:3" id="fnref:3" title="see footnote" class="footnote">[3]</a>
+                <ul>
+                    <li>I chose three action and adventure or science fiction and fantasy-classified films released in 2017 (the same year as <em>Atomic Blonde</em>) from outside the dataset to compare: <em>Blade Runner 2049</em>, <em>Justice League</em>,
+                        and <em>Baby Driver</em>. It was difficult to find action movies with budgets as comparatiely low as <em>Atomic</em>&#8217;s $30M USD, with only <em>Baby Driver</em> coming close at $34M USD. The other two films were simply the
+                        most similar in terms of tone and genre that I could find from that year.<a href="#fn:3" id="fnref:3" title="see footnote" class="footnote">[3]</a>
 
-<ul>
-<li><em>Atomic Blonde</em> made significantly less than all three films, but cost less than all of them as well (by a large margin for all but <em>Baby Driver</em>. Its return on investment (dollars earned for dollars spent) was calculated at $2.33.</li>
-<li><em>Baby Driver</em> had a higher ROI with a value of $5.87.</li>
-<li><em>Blade Runner 2049</em> and <em>Justice League</em> significantly underperformed <em>Atomic</em> despite selling far more tickets, due to their vastly higher budgets; their ROIs were $0.73 and $1.28, respectively.</li>
-<li><em>Atomic Blonde</em> still made less money than all three films, which meant that fewer people went to see it - a factor I believe is likely explained by promotional/marketing concerns (see above footnote) but which could still be argued to be evidence that LGBT action films will not be successful. Notably though, even the highly successful and critically acclaimed (to a greater extent than <em>Atomic Blonde</em>) <em>Baby Driver</em> was just over twice as successful as the former film, while <em>Blade Runner 2049</em>, a major, high-budget science fiction release, made about 2.5 times as much. These figures are certainly not conclusive, and merit further investigation, with more robust data science tools.</li>
-</ul></li>
-<li>Some LGBT films were highly successful by comparison with &#8220;peer films&#8221; from the same or surrounding years, in similar genres.
+                        <ul>
+                            <li><em>Atomic Blonde</em> made significantly less than all three films, but cost less than all of them as well (by a large margin for all but <em>Baby Driver</em>. Its return on investment (dollars earned for dollars spent) was
+                                calculated at $2.33.</li>
+                            <li><em>Baby Driver</em> had a higher ROI with a value of $5.87.</li>
+                            <li><em>Blade Runner 2049</em> and <em>Justice League</em> significantly underperformed <em>Atomic</em> despite selling far more tickets, due to their vastly higher budgets; their ROIs were $0.73 and $1.28, respectively.</li>
+                            <li><em>Atomic Blonde</em> still made less money than all three films, which meant that fewer people went to see it - a factor I believe is likely explained by promotional/marketing concerns (see above footnote) but which could
+                                still be argued to be evidence that LGBT action films will not be successful. Notably though, even the highly successful and critically acclaimed (to a greater extent than <em>Atomic Blonde</em>) <em>Baby Driver</em> was
+                                just over twice as successful as the former film, while <em>Blade Runner 2049</em>, a major, high-budget science fiction release, made about 2.5 times as much. These figures are certainly not conclusive, and merit further
+                                investigation, with more robust data science tools.</li>
+                        </ul>
+                    </li>
+                    <li>Some LGBT films were highly successful by comparison with &#8220;peer films&#8221; from the same or surrounding years, in similar genres.
 
-<ul>
-<li><em>The Imitation Game</em>, both a biopic and a World War II thriller, released in 2014, cost an estimated $14M USD, and made roughly $234M in the international box office, while also winning awards.</li>
-<li>The peer films I selected were: <em>American Sniper</em> (2014) (also a blend of thriller and biopic), <em>Birdman</em> (2014), also an acclaimed Oscar nominee from that year with a strong dramatic angle blended with some elements of the unusual, and <em>Captain Philips</em> (2013), also a biopic with thriller elements.</li>
-<li>All of these films were very successful; <em>Imitation</em> had an impressive ROI of $15.68 USD per dollar spent. <em>American Sniper</em> was significantly more expensive and returned $4.95 USD per dollar spent; <em>Birdman</em> was much cheaper but sold fewer tickets and returned a $4.73 USD ROI, and <em>Captain Philips</em> was less successful in ticket sales <em>and</em> more expensive, returning only $0.95 USD.</li>
-<li>Of all of these films, only <em>American Sniper</em> had more ticket sales - more people interested in seeing it - than <em>Imitation Game</em>. This suggests that the biopic-thriller genre may be one where LGBT major characters can be highly competitive.</li>
-</ul></li>
-<li><em>Black Swan</em> was not the most profitable film in the dataset (that honor goes to <em>Bohemian Rhapsody</em>) but its massive success relative to its budget makes it the most profitable.
+                        <ul>
+                            <li><em>The Imitation Game</em>, both a biopic and a World War II thriller, released in 2014, cost an estimated $14M USD, and made roughly $234M in the international box office, while also winning awards.</li>
+                            <li>The peer films I selected were: <em>American Sniper</em> (2014) (also a blend of thriller and biopic), <em>Birdman</em> (2014), also an acclaimed Oscar nominee from that year with a strong dramatic angle blended with some elements
+                                of the unusual, and <em>Captain Philips</em> (2013), also a biopic with thriller elements.</li>
+                            <li>All of these films were very successful; <em>Imitation</em> had an impressive ROI of $15.68 USD per dollar spent. <em>American Sniper</em> was significantly more expensive and returned $4.95 USD per dollar spent; <em>Birdman</em>                                was much cheaper but sold fewer tickets and returned a $4.73 USD ROI, and <em>Captain Philips</em> was less successful in ticket sales <em>and</em> more expensive, returning only $0.95 USD.</li>
+                            <li>Of all of these films, only <em>American Sniper</em> had more ticket sales - more people interested in seeing it - than <em>Imitation Game</em>. This suggests that the biopic-thriller genre may be one where LGBT major characters
+                                can be highly competitive.</li>
+                        </ul>
+                    </li>
+                    <li><em>Black Swan</em> was not the most profitable film in the dataset (that honor goes to <em>Bohemian Rhapsody</em>) but its massive success relative to its budget makes it the most profitable.
 
-<ul>
-<li><em>Swan</em> was made on a $13M USD estimated budget, released in 2010, made approximately $331M USD internationally, and had a ROI of $24.48. It was both highly cost effective and got a lot of people to see it.</li>
-<li>The peer films I selected for comparison were <em>Shutter Island</em> (2010) (also a cerebral thriller from acclaimed talent), <em>The Cabin in the Woods</em> (2011) (a cult thriller with a female protagonist), and <em>Drive</em> (2011) (another cult thriller.) The latter two were modestly profitable, with ROIs of $2.14 USD and $4.13 USD, and were made on modest budgets (<em>Cabin</em> was $30M USD and <em>Drive</em> was just $1M more expensive than <em>Black Swan</em> at $15M USD estimated). <em>Shutter Island</em> was produced on a $60M USD budget and in fact lost money, despite also being produced by an acclaimed director, with Leonardo diCaprio as lead, and having many of the dark atmospheric touches that were successful for <em>Black Swan</em>.</li>
-<li>Clearly dark atmospheric thrillers are an area where LGBT films can succeed. While deeper analysis would be required to explain <em>Black Swan</em>&#8217;s remarkable success, that success remains quite remarkable.</li>
-</ul></li>
-</ul></li>
-<li><em>Deadpool</em> and <em>Deadpool 2</em> both indicate that LGBT superhero films can succeed; <em>Deadpool 2</em> was less profitable, because it was vastly more expensive than its predecessor. Both pulled in high audience numbers and <em>Deadpool</em> (2016) performed comparably with other non-LGBT inclusive superhero films of the same year, such as <em>Suicide Squad</em>, <em>X-Men: Apocalypse</em>, and even MCU juggernaut <em>Doctor Strange</em>.</li>
-<li>Also within the superhero genre, <em>Harley Quinn: Birds of Prey</em> was remarkably successful despite a quite high budget and being released in 2020 when the COVID&#8211;19 contagion outbreak was beginning. US theaters shut down during its run and it moved to video on demand, yet its ultimate theatrical take alone from the international tally is enough to make it fairly profitable. <em>Birds of Prey</em> features a lead character who is incidentally interested in both men and women, and a major sapphic supporting character/ally, so its LGBT themes are undeniable.<a href="#fn:4" id="fnref:4" title="see footnote" class="footnote">[4]</a></li>
-<li><em>Assassination Nation</em>, a thriller about four women, one of whom is transgender, who are forced to violently defend themselves after their personal secrets are exposed online, was a commercial failure. Although made on a budget of only $7M USD estimated, it made back only $2.6M USD. However, similar low budget films of the same year (2018) had similarly poor results, with the Nicholas Cage thriller <em>Mandy</em> having almost exactly the same numbers. I theorize, but unfortunately am unable to confirm without access to industry marketing budget data, that these films failed because they simply were not promoted.</li>
-</ul></li>
-<li>Overall, even this existing dataset has dimensions I have not yet explored. The key takeaways should be:
+                        <ul>
+                            <li><em>Swan</em> was made on a $13M USD estimated budget, released in 2010, made approximately $331M USD internationally, and had a ROI of $24.48. It was both highly cost effective and got a lot of people to see it.</li>
+                            <li>The peer films I selected for comparison were <em>Shutter Island</em> (2010) (also a cerebral thriller from acclaimed talent), <em>The Cabin in the Woods</em> (2011) (a cult thriller with a female protagonist), and <em>Drive</em>                                (2011) (another cult thriller.) The latter two were modestly profitable, with ROIs of $2.14 USD and $4.13 USD, and were made on modest budgets (<em>Cabin</em> was $30M USD and <em>Drive</em> was just $1M more expensive
+                                than <em>Black Swan</em> at $15M USD estimated). <em>Shutter Island</em> was produced on a $60M USD budget and in fact lost money, despite also being produced by an acclaimed director, with Leonardo diCaprio as lead, and
+                                having many of the dark atmospheric touches that were successful for <em>Black Swan</em>.</li>
+                            <li>Clearly dark atmospheric thrillers are an area where LGBT films can succeed. While deeper analysis would be required to explain <em>Black Swan</em>&#8217;s remarkable success, that success remains quite remarkable.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><em>Deadpool</em> and <em>Deadpool 2</em> both indicate that LGBT superhero films can succeed; <em>Deadpool 2</em> was less profitable, because it was vastly more expensive than its predecessor. Both pulled in high audience numbers and <em>Deadpool</em>                (2016) performed comparably with other non-LGBT inclusive superhero films of the same year, such as <em>Suicide Squad</em>, <em>X-Men: Apocalypse</em>, and even MCU juggernaut <em>Doctor Strange</em>.</li>
+            <li>Also within the superhero genre, <em>Harley Quinn: Birds of Prey</em> was remarkably successful despite a quite high budget and being released in 2020 when the COVID&#8211;19 contagion outbreak was beginning. US theaters shut down during its
+                run and it moved to video on demand, yet its ultimate theatrical take alone from the international tally is enough to make it fairly profitable. <em>Birds of Prey</em> features a lead character who is incidentally interested in both men
+                and women, and a major sapphic supporting character/ally, so its LGBT themes are undeniable.<a href="#fn:4" id="fnref:4" title="see footnote" class="footnote">[4]</a></li>
+            <li><em>Assassination Nation</em>, a thriller about four women, one of whom is transgender, who are forced to violently defend themselves after their personal secrets are exposed online, was a commercial failure. Although made on a budget of only
+                $7M USD estimated, it made back only $2.6M USD. However, similar low budget films of the same year (2018) had similarly poor results, with the Nicholas Cage thriller <em>Mandy</em> having almost exactly the same numbers. I theorize, but
+                unfortunately am unable to confirm without access to industry marketing budget data, that these films failed because they simply were not promoted.</li>
+        </ul>
+    </li>
+    <li>Overall, even this existing dataset has dimensions I have not yet explored. The key takeaways should be:
 
-<ul>
-<li>The international market helps LGBT films far more than it hurts.</li>
-<li>Many LGBT films have performed comparably or better than similar &#8220;straight&#8221; films.</li>
-<li>Many &#8220;critically acclaimed&#8221; films about LGBT characters lost money.
+        <ul>
+            <li>The international market helps LGBT films far more than it hurts.</li>
+            <li>Many LGBT films have performed comparably or better than similar &#8220;straight&#8221; films.</li>
+            <li>Many &#8220;critically acclaimed&#8221; films about LGBT characters lost money.
 
-<ul>
-<li>Although there are more dramatic, non-genre LGBT films than any other category, the most successful films have <em>generally</em> had some genre elements, whether thriller (<em>Black Swan</em>, <em>The Girl with the Dragon Tattoo</em>, <em>The Imitation Game</em>) or science fiction and fantasy (the <em>Deadpool</em> movies, <em>Birds of Prey</em>). The big exception is <em>Bohemian Rhapsody</em>, which was simply stunningly successful on a financial level as a biopic.</li>
-<li>On the biopic note: biopics are extremely common among these films, but the most successful ones blend some other genre - <em>The Favourite</em> being somewhat comedic, the aforementioned war thriller elements of <em>Imitation Game</em>, and so on. Meanwhile, <em>The Danish Girl</em>, <em>Dallas Buyer&#8217;s Club</em>, and smaller scale biopics and history films like <em>Tom of Finland</em>, <em>Howl</em>, and <em>Mapplethorpe</em> were largely inconsequential at the box office.</li>
-<li>Insofar as there is a business of LGBT movies, that business gets its revenue from the big pictures, and the occassional breakout hit such as <em>Moonlight</em> or <em>Tangerine</em>. I would suggest this indicates that providing funding for LGBT-character-centric films may be a wise business decision for Hollywood&#8217;s decision-makers.</li>
-</ul></li>
-</ul></li>
+                <ul>
+                    <li>Although there are more dramatic, non-genre LGBT films than any other category, the most successful films have <em>generally</em> had some genre elements, whether thriller (<em>Black Swan</em>, <em>The Girl with the Dragon Tattoo</em>,
+                        <em>The Imitation Game</em>) or science fiction and fantasy (the <em>Deadpool</em> movies, <em>Birds of Prey</em>). The big exception is <em>Bohemian Rhapsody</em>, which was simply stunningly successful on a financial level as
+                        a biopic.</li>
+                    <li>On the biopic note: biopics are extremely common among these films, but the most successful ones blend some other genre - <em>The Favourite</em> being somewhat comedic, the aforementioned war thriller elements of <em>Imitation Game</em>,
+                        and so on. Meanwhile, <em>The Danish Girl</em>, <em>Dallas Buyer&#8217;s Club</em>, and smaller scale biopics and history films like <em>Tom of Finland</em>, <em>Howl</em>, and <em>Mapplethorpe</em> were largely inconsequential
+                        at the box office.</li>
+                    <li>Insofar as there is a business of LGBT movies, that business gets its revenue from the big pictures, and the occassional breakout hit such as <em>Moonlight</em> or <em>Tangerine</em>. I would suggest this indicates that providing funding
+                        for LGBT-character-centric films may be a wise business decision for Hollywood&#8217;s decision-makers.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
 </ul>
 
-<p>With these preliminary observations in mind, I must stress that it is too early to find &#8220;conclusions&#8221; to this study. Actual data analysis tools must be developed, and are currently in development. There is, however, one exception: the &#8220;international box office&#8221; argument is objectively wrong. Almost invariably LGBT films meeting these criteria made more money from outside the domestic market than from within it:</p>
+<p>With these preliminary observations in mind, I must stress that it is too early to find &#8220;conclusions&#8221; to this study. Actual data analysis tools must be developed, and are currently in development. There is, however, one exception: the &#8220;international
+    box office&#8221; argument is objectively wrong. Almost invariably LGBT films meeting these criteria made more money from outside the domestic market than from within it:</p>
 
-<p><iframe title="LGBT Film Revenue, International &amp;amp; Domestic, Jan. 2010 - Aug. 2015" aria-label="Bullet Bars" id="datawrapper-chart-wk6qG" src="https://datawrapper.dwcdn.net/wk6qG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="2363"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
-</script></p>
+<p><iframe title="LGBT Film Revenue, International &amp;amp; Domestic, Jan. 2010 - Aug. 2015" aria-label="Bullet Bars" id="datawrapper-chart-wk6qG" src="https://datawrapper.dwcdn.net/wk6qG/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;"
+        height="2363"></iframe>
+    <script type="text/javascript">
+        ! function() {
+            "use strict";
+            window.addEventListener("message", (function(a) {
+                if (void 0 !== a.data["datawrapper-height"])
+                    for (var e in a.data["datawrapper-height"]) {
+                        var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']");
+                        t && (t.style.height = a.data["datawrapper-height"][e] + "px")
+                    }
+            }))
+        }();
+    </script>
+</p>
 
 <h2>Next Steps</h2>
 
-<p>This is a big data project, and unfortunately, the big data is not available in a convenient dataset. There are several major pieces to the puzzle that need to be assembled before conclusive recommendations can be made to activists and to film producers about how to reconcile the need for representation with financial realities. These puzzle pieces are:
-* actual average budget and international box office data for <em>all</em> films, in a format that can be broken down by year and into other related categories, so that the LGBT movie dataset can be compared with films in general to determine questions such as &#8220;how do the ROIs for the top performing LGBT films compare with same for non-LGBT-focused films, across time?&#8221;;
-* release date data to identify which films members of the dataset were competing with;</p>
+<p>This is a big data project, and unfortunately, the big data is not available in a convenient dataset. There are several major pieces to the puzzle that need to be assembled before conclusive recommendations can be made to activists and to film producers
+    about how to reconcile the need for representation with financial realities. These puzzle pieces are: * actual average budget and international box office data for <em>all</em> films, in a format that can be broken down by year and into other related
+    categories, so that the LGBT movie dataset can be compared with films in general to determine questions such as &#8220;how do the ROIs for the top performing LGBT films compare with same for non-LGBT-focused films, across time?&#8221;; * release date
+    data to identify which films members of the dataset were competing with;</p>
 
-<p>Less crucially, it would be helpful to have some form of web-based crowdsourcing to confirm the accuracy of the coding. However, due to the vast difference in revenue between the top-performing films in the dataset and the films most likely to be miscoded due to obscurity, this is a lower priority.</p>
+<p>Less crucially, it would be helpful to have some form of web-based crowdsourcing to confirm the accuracy of the coding. However, due to the vast difference in revenue between the top-performing films in the dataset and the films most likely to be miscoded
+    due to obscurity, this is a lower priority.</p>
 
 <p>Based on these concerns, the future of the data science project will proceed as follows:</p>
 
 <ol>
-<li>I will develop a software program, tentatively called imdb-organizer, which can parse (the TSV (tab separated value) dumps released daily by imdB)[https://www.imdb.com/interfaces/] containing their entire database, but split across multiple files. The software&#8217;s function will initially be that, when provided with these files (which are proprietary to imdB and cannot be distributed with the application itself), it uses the imdB movie record ID to associate all relative information about a movie, creates a record of the movie in a backend database, and then adds all this information to the database. Essentially imdb-organizer will create a local mirror of imdB which can be queried, interfaced with dataset analysis software, and so on. This may seem unnecessary, but for anyone who has examined the depth of imdB&#8217;s information sets, and who has noted the limitations of existing query APIs (for instance, OMDB, which I used to find some parts of the current dataset, can only be searched by title), the utility is clear.</li>
-<li>Eventually, I may create a web-based GUI front-end to the imdb-organizer backend which will allow fast database queries; however, it&#8217;s likely that existing data science applications such as Tableau will be able to offer superior assistance in this regard, or that simple Python scripts can yield the required data. The web based GUI could theoretically allow additional coders to be brought on board, and eventually, could be expanded to a larger machine-learning project which would use human volunteer coders to learn about the plots of various movies and infer connections and trends about movie storylines, even unrelated to LGBT issues. This, however, is significantly beyond the current project scope.</li>
-<li>I will attempt to create and provide visualizations for in-depth comparisons and also engage in further data exploration that will help determine when LGBT movies succeed and when they fail. I will continue to promote and publish these results as I discover them, and engage in advocacy on this issue.</li>
+    <li>I will develop a software program, tentatively called imdb-organizer, which can parse (the TSV (tab separated value) dumps released daily by imdB)[https://www.imdb.com/interfaces/] containing their entire database, but split across multiple files.
+        The software&#8217;s function will initially be that, when provided with these files (which are proprietary to imdB and cannot be distributed with the application itself), it uses the imdB movie record ID to associate all relative information
+        about a movie, creates a record of the movie in a backend database, and then adds all this information to the database. Essentially imdb-organizer will create a local mirror of imdB which can be queried, interfaced with dataset analysis software,
+        and so on. This may seem unnecessary, but for anyone who has examined the depth of imdB&#8217;s information sets, and who has noted the limitations of existing query APIs (for instance, OMDB, which I used to find some parts of the current dataset,
+        can only be searched by title), the utility is clear.</li>
+    <li>Eventually, I may create a web-based GUI front-end to the imdb-organizer backend which will allow fast database queries; however, it&#8217;s likely that existing data science applications such as Tableau will be able to offer superior assistance in
+        this regard, or that simple Python scripts can yield the required data. The web based GUI could theoretically allow additional coders to be brought on board, and eventually, could be expanded to a larger machine-learning project which would use
+        human volunteer coders to learn about the plots of various movies and infer connections and trends about movie storylines, even unrelated to LGBT issues. This, however, is significantly beyond the current project scope.</li>
+    <li>I will attempt to create and provide visualizations for in-depth comparisons and also engage in further data exploration that will help determine when LGBT movies succeed and when they fail. I will continue to promote and publish these results as
+        I discover them, and engage in advocacy on this issue.</li>
 </ol>
 
 <div class="footnotes">
-<hr />
-<ol>
+    <hr />
+    <ol>
 
-<li id="fn:1">
-<p>Numbers from The National Study of Sexual Health and Behavior (https://nationalsexstudy.indiana.edu) indicate that about 8% of people identify themselves as lesbian, gay, or bisexual in the United States, and more people than that have had some kind of same-sex sexual or romantic experience. The numbers on transgender people are massively fluctuating, because of dispute over definitions, but it&#8217;s likely that as a conservative estimate, transgender people make up at minimum half a percent of the United States population. These figures are always challenging, because people remain in the closet in a lot of cases - but they are still LGBT! <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
-</li>
+        <li id="fn:1">
+            <p>Numbers from The National Study of Sexual Health and Behavior (https://nationalsexstudy.indiana.edu) indicate that about 8% of people identify themselves as lesbian, gay, or bisexual in the United States, and more people than that have had
+                some kind of same-sex sexual or romantic experience. The numbers on transgender people are massively fluctuating, because of dispute over definitions, but it&#8217;s likely that as a conservative estimate, transgender people make up at
+                minimum half a percent of the United States population. These figures are always challenging, because people remain in the closet in a lot of cases - but they are still LGBT! <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+        </li>
 
-<li id="fn:2">
-<p>Robinson, J. (2016). Did You Catch All the Ways Hollywood Pandered to China This Year?. Retrieved 18 August 2020, from https://www.vanityfair.com/hollywood/2016/08/did-you-catch-the-ways-hollywood-pandered-to-china-this-year; Savitsky, S. (2019). Hollywood has long caved to Chinese censorship to rake in profits in its massive market. Retrieved 18 August 2020, from https://www.axios.com/hollywood-movies-china-censorship-bba26aa9-b122&#8211;4b2c&#8211;80e1&#8211;054394414698.html; numerous other sources. <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
-</li>
+        <li id="fn:2">
+            <p>Robinson, J. (2016). Did You Catch All the Ways Hollywood Pandered to China This Year?. Retrieved 18 August 2020, from https://www.vanityfair.com/hollywood/2016/08/did-you-catch-the-ways-hollywood-pandered-to-china-this-year; Savitsky, S.
+                (2019). Hollywood has long caved to Chinese censorship to rake in profits in its massive market. Retrieved 18 August 2020, from https://www.axios.com/hollywood-movies-china-censorship-bba26aa9-b122&#8211;4b2c&#8211;80e1&#8211;054394414698.html;
+                numerous other sources. <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+        </li>
 
-<li id="fn:3">
-<p>Further imdB dataset analysis based on release dates may allow inferences to be drawn about films&#8217; release dates; for instance, <em>Atomic Blonde</em> was released shortly after the Christopher Nolan blockbuster <em>Dunkirk</em>, and almost certainly suffered in performance as a result of this much more than any prejudice against the lead character&#8217;s same-sex sexual activity. Performing release date based analysis for all or even a significant number of the films in the dataset will require decryption of the database using the imdb-organizer application I am developing and discuss in the &#8220;Next Steps&#8221; section. <a href="#fnref:3" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
-</li>
+        <li id="fn:3">
+            <p>Further imdB dataset analysis based on release dates may allow inferences to be drawn about films&#8217; release dates; for instance, <em>Atomic Blonde</em> was released shortly after the Christopher Nolan blockbuster <em>Dunkirk</em>, and
+                almost certainly suffered in performance as a result of this much more than any prejudice against the lead character&#8217;s same-sex sexual activity. Performing release date based analysis for all or even a significant number of the films
+                in the dataset will require decryption of the database using the imdb-organizer application I am developing and discuss in the &#8220;Next Steps&#8221; section. <a href="#fnref:3" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+        </li>
 
-<li id="fn:4">
-<p>I do not rank these films based on perceived &#8220;depth&#8221; or &#8220;strength&#8221; of the LGBT representation any more than I do based on the &#8220;positive&#8221; or &#8220;negative&#8221; nature of the content. Thus, <em>Deadpool</em>, where the protagonist&#8217;s attraction to men is rather incidental even though it is objectively present, is not &#8220;weighted&#8221; any differently than <em>The Danish Girl</em>, which is entirely about a transgender woman&#8217;s transition. In &#8220;Next Steps&#8221; I discuss possible ways this could be addressed, while noting that getting deeper into the content of movies will require sophisticated data analysis and the cooperation of other humans. <a href="#fnref:4" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
-</li>
+        <li id="fn:4">
+            <p>I do not rank these films based on perceived &#8220;depth&#8221; or &#8220;strength&#8221; of the LGBT representation any more than I do based on the &#8220;positive&#8221; or &#8220;negative&#8221; nature of the content. Thus, <em>Deadpool</em>,
+                where the protagonist&#8217;s attraction to men is rather incidental even though it is objectively present, is not &#8220;weighted&#8221; any differently than <em>The Danish Girl</em>, which is entirely about a transgender woman&#8217;s
+                transition. In &#8220;Next Steps&#8221; I discuss possible ways this could be addressed, while noting that getting deeper into the content of movies will require sophisticated data analysis and the cooperation of other humans. <a href="#fnref:4"
+                    title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+        </li>
 
-</ol>
+    </ol>
 </div>
+
+</html>
