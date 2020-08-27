@@ -9,7 +9,9 @@
     <!--declare that this is a vue.js page-->
      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
      <!--this is the development version of vue and will throw up errors if they occur - will be replaced with production later-->
-    
+     
+     <!--include D3 libraries for parsing TSV files, which IMDb uses to provide its open data-->
+     <script src="https://d3js.org/d3.v6.min.js"></script>
 </head>
 <body>
 
@@ -21,5 +23,12 @@
 
     <script src="IMDB-parse-a.js"> </script>
 
+<script>d3.tsv{"name.basics.tsv"), function(data) {
+    for (var i = 0; i < data.length; i++) {
+        console.log(data[1].titleId);
+    }
+});
+    }
+}</script>
 </body>
 </html>

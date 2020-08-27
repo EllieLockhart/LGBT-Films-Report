@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- D3 Template, can run with: python -m SimpleHTTPServer 8000
+     Reference: https://github.com/mbostock/d3/wiki/API-Reference
+-->
+<html>
+  <head>
+    <!-- Load D3 from site -->
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+
+    <!-- CSS (Styling) -->
+    <style type="text/css">
+
+    /* Applied to all <p> tags */
+    p {
+      color: blue;
+    }
+
+    /* Applied to all tags with the class "red" */
+    .red {
+      background: red;
+    }
+
+    /* Applied to the tag with the id "some-id" */
+    #some-id {
+      font-style: italic;
+    }
+
+    /* Applied only to <p> tags that are inside <li> tags */
+    li pi {
+      color: #0C0;
+    }
+
+    </style>
+    <!-- End CSS (Styling) -->
+
+    </head>
+
+  <body>
+
+  <div>
+    <p>Normal Paragraph</p>
+    <p class="red">Red paragraph</p>
+  </div>
+
+  <ol>
+    <li id="some-id">Unique element</li>
+    <li>Another list element</li>
+    <li>
+      <p>Paragraph inside list element</p>
+      <p>Second paragraph</p>
+    </li>
+  </ol>
+
+  <!-- Using listeners -->
+  <h1 id="click-me">Click on me!</h1>
+  <p class="hover-me">Hover over me!</p>
+
+  <!-- Begin Javascript -->
+  <script type="text/javascript">
+
+  /* Basic D3 Updating Pattern for taking data and binding to elements */
+  
+
+d3.tsv("name.basics.tsv", function(data) {
+  console.log(data[0].x);
+});
+    }
+}
+  </script>
+  <!-- End Javascript -->
+
+  </body>
+</html>
